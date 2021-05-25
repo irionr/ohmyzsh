@@ -242,18 +242,25 @@ prompt_aws() {
   esac
 }
 
+prompt_pgenv() {
+  [[ -z $PG_VERSION ]] && return
+  prompt_segment magenta $CURRENT_FG $(_pgenv_hook)
+}
+
 ## Main prompt
 build_prompt() {
   RETVAL=$?
   prompt_status
   prompt_virtualenv
   prompt_aws
-  prompt_context
   prompt_dir
   prompt_git
   prompt_bzr
   prompt_hg
+  prompt_pgenv
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) '
+PROMPT='╭─%{%f%b%k%}$(build_prompt)
+╰─▶ '
+
