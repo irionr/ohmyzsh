@@ -265,11 +265,12 @@ build_prompt() {
   prompt_status
   prompt_virtualenv
   prompt_aws
-  prompt_dir
+	prompt_dir
   prompt_git
   prompt_bzr
   prompt_hg
   prompt_pgenv
+	prompt_context
   prompt_end
 }
 
