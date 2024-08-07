@@ -4,3 +4,4 @@
 # # list long format, order by reverse time.
 alias lt="ls -lrt"
 alias grep='grep --color=always --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+alias ls='ls --no-group --tabsize=0 --color=auto'
